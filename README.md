@@ -35,6 +35,20 @@ No login or authorization is required — the app is open-access by design for t
 "ConnectionStrings": {
 "DefaultConnection": "Server=(localdb)\mssqllocaldb;Database=GitHubPortalDb;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
+
+## Manual Test Cases
+
+| # | Test Case | Steps | Expected Result |
+|---|-----------|-------|-----------------|
+| 1 | **List page loads from database** | Run the app and navigate to the home page | All 8 seeded portal links display as cards |
+| 2 | **Add a new portal link** | Click "Add New Link" → fill in Name, Description, URL → click "Save Link" | Redirected to Index; new card appears in the list |
+| 3 | **Edit an existing portal link** | Click the pencil icon on any card → change the Name → click "Save Changes" | Redirected to Index; card shows the updated name |
+| 4 | **Delete a portal link** | Click the trash icon on any card → click "Yes, Delete It" | Link is removed from the list |
+| 5 | **Search filters results** | Type "GitHub" in the search box → click Search | Only cards matching "GitHub" in name or description are shown |
+| 6 | **Clear search restores full list** | After searching, click the X button | All portal links are shown again |
+| 7 | **Visit link opens in new tab** | Click the "Visit" button on any card | The destination URL opens in a new browser tab |
+| 8 | **Data persists across runs** | Add a new link → stop the app → restart | The new link still appears after restart |
+
 ## Debugging Notes
 
 ### 1. 'Index' Was Not Found
