@@ -1,0 +1,38 @@
+@model GitHubPortal.Models.PortalLink
+@{
+    ViewData["Title"] = "Delete Portal Link";
+}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-7 col-lg-5">
+        <a asp-action="Index" class="btn btn-link ps-0 mb-3 d-flex align-items-center gap-1" style="color: #cdd9e5;">
+            <i class="bi bi-arrow-left"></i> Back to Portal Links
+        </a>
+        <div class="portal-form-card border-danger">
+            <div class="portal-form-header portal-form-header--danger">
+                <h4 class="mb-0 d-flex align-items-center gap-2">
+                    <i class="bi bi-exclamation-triangle-fill"></i>Confirm Delete
+                </h4>
+            </div>
+            <div class="card-body p-4">
+                <p style="color: #cdd9e5;" class="mb-4">Are you sure you want to delete this portal link? This action cannot be undone.</p>
+                <div class="portal-delete-preview mb-4 p-3 rounded">
+                    <h5 class="mb-1" style="color: #cdd9e5;">@Model.Name</h5>
+                    <p style="color: #cdd9e5;" class="small mb-2">@Model.Description</p>
+                    <a href="@Model.Url" target="_blank" style="color: #8b949e;" class="small text-decoration-none">
+                        <i class="bi bi-link-45deg me-1"></i>@Model.Url
+                    </a>
+                </div>
+                <form asp-action="Delete" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="PortalLinkId" />
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-danger flex-grow-1">
+                            <i class="bi bi-trash me-1"></i>Yes, Delete It
+                        </button>
+                        <a asp-action="Index" class="btn btn-outline-secondary flex-grow-1">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

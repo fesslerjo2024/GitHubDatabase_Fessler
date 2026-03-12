@@ -1,0 +1,48 @@
+@model GitHubPortal.Models.PortalLink
+@{
+    ViewData["Title"] = "Add Portal Link";
+}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <a asp-action="Index" class="btn btn-link ps-0 mb-3 d-flex align-items-center gap-1" style="color: #cdd9e5;">
+            <i class="bi bi-arrow-left"></i> Back to Portal Links
+        </a>
+        <div class="portal-form-card">
+            <div class="portal-form-header">
+                <h4 class="mb-0 d-flex align-items-center gap-2">
+                    <i class="bi bi-plus-circle-fill"></i>Add New Portal Link
+                </h4>
+            </div>
+            <div class="card-body p-4">
+                <form asp-action="Create" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-4">
+                        <label asp-for="Name" class="form-label portal-label" style="color: #cdd9e5;">
+                            <i class="bi bi-tag me-1"></i>Name
+                        </label>
+                        <input asp-for="Name" class="form-control portal-input" placeholder="e.g. GitHub" />
+                    </div>
+                    <div class="mb-4">
+                        <label asp-for="Description" class="form-label portal-label" style="color: #cdd9e5;">
+                            <i class="bi bi-text-left me-1"></i>Description
+                        </label>
+                        <textarea asp-for="Description" class="form-control portal-input" rows="3"
+                                  placeholder="Short summary of what this link is for..."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label asp-for="Url" class="form-label portal-label" style="color: #cdd9e5;">
+                            <i class="bi bi-link-45deg me-1"></i>URL
+                        </label>
+                        <input asp-for="Url" class="form-control portal-input" placeholder="https://example.com" />
+                    </div>
+                    <div class="d-flex gap-2 pt-2">
+                        <button type="submit" class="btn btn-success flex-grow-1">
+                            <i class="bi bi-check-lg me-1"></i>Save Link
+                        </button>
+                        <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
