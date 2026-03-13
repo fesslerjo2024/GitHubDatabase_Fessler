@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GitHubDatabase_Fessler.Migrations
 {
     [DbContext(typeof(PortalDbContext))]
-    [Migration("20260312224603_Initial")]
-    partial class Initial
+    [Migration("20260313004551_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,58 +52,44 @@ namespace GitHubDatabase_Fessler.Migrations
                         new
                         {
                             PortalLinkId = 1,
-                            Description = "The world's leading platform for version control and collaborative software development.",
-                            Name = "GitHub",
-                            Url = "https://github.com"
+                            Description = "This is what you're using right now! GitHub Portal is a data-driven web application built with ASP.NET Core MVC that allows users to manage a curated list of useful links.",
+                            Name = "GitHub Database",
+                            Url = "https://github.com/fesslerjo2024/GitHubDatabase_Fessler"
                         },
                         new
                         {
                             PortalLinkId = 2,
-                            Description = "The largest Q&A community for developers to learn, share knowledge, and build careers.",
-                            Name = "Stack Overflow",
-                            Url = "https://stackoverflow.com"
+                            Description = "My personal portfolio website showcasing my projects, skills, resume, and contact information. Built with HTML, CSS, and JavaScript, the site is fully responsive and optimized for a smooth user experience.",
+                            Name = "AWS Cloud Portfolio Website",
+                            Url = "https://github.com/fesslerjo2024/AWSCloudPortfolioWebsite_Fessler"
                         },
                         new
                         {
                             PortalLinkId = 3,
-                            Description = "Official Microsoft documentation for .NET, ASP.NET Core, Azure, and all Microsoft technologies.",
-                            Name = "Microsoft Docs",
-                            Url = "https://docs.microsoft.com"
+                            Description = "MarketMates is a relational database system designed as a final project for Database Concepts, Design, and Application.",
+                            Name = "MarketMates Database",
+                            Url = "https://github.com/fesslerjo2024/MarketMates_Database"
                         },
                         new
                         {
                             PortalLinkId = 4,
-                            Description = "Mozilla's comprehensive reference for HTML, CSS, and JavaScript web development.",
-                            Name = "MDN Web Docs",
-                            Url = "https://developer.mozilla.org"
+                            Description = "Final Project for Java Class using Open-Meteo and Zippopotam.us APIs.",
+                            Name = "Weather App Java",
+                            Url = "https://github.com/fesslerjo2024/WeatherAppJava_Fessler"
                         },
                         new
                         {
                             PortalLinkId = 5,
-                            Description = "The package manager for .NET — browse and download open-source libraries for your projects.",
-                            Name = "NuGet Gallery",
-                            Url = "https://www.nuget.org"
+                            Description = "This project was made in my Java class to demonstrate how to use an array as well as make objects.",
+                            Name = "Game Interface",
+                            Url = "https://github.com/fesslerjo2024/GameInterface_Fessler"
                         },
                         new
                         {
                             PortalLinkId = 6,
-                            Description = "Official Bootstrap 5 documentation for building responsive, mobile-first websites.",
-                            Name = "Bootstrap Docs",
-                            Url = "https://getbootstrap.com/docs"
-                        },
-                        new
-                        {
-                            PortalLinkId = 7,
-                            Description = "Microsoft's official EF Core documentation for database access in .NET applications.",
-                            Name = "Entity Framework Docs",
-                            Url = "https://learn.microsoft.com/en-us/ef/core/"
-                        },
-                        new
-                        {
-                            PortalLinkId = 8,
-                            Description = "Beginner-friendly tutorials and references for HTML, CSS, JavaScript, SQL, and more.",
-                            Name = "W3Schools",
-                            Url = "https://www.w3schools.com"
+                            Description = "Assignment for my Java class to teach us how to use JavaFX to create random circles and color them when they overlap.",
+                            Name = "JavaFX Circle Overlap",
+                            Url = "https://github.com/fesslerjo2024/JavaFXCircleOverlap"
                         });
                 });
 #pragma warning restore 612, 618

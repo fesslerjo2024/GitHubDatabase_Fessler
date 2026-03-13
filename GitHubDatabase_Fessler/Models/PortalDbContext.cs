@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GitHubPortal.Models
 {
@@ -15,16 +16,13 @@ namespace GitHubPortal.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            // Seed data - 8 sample portal links (Extra Credit)
             modelBuilder.Entity<PortalLink>().HasData(
-                new PortalLink { PortalLinkId = 1, Name = "GitHub", Description = "The world's leading platform for version control and collaborative software development.", Url = "https://github.com" },
-                new PortalLink { PortalLinkId = 2, Name = "Stack Overflow", Description = "The largest Q&A community for developers to learn, share knowledge, and build careers.", Url = "https://stackoverflow.com" },
-                new PortalLink { PortalLinkId = 3, Name = "Microsoft Docs", Description = "Official Microsoft documentation for .NET, ASP.NET Core, Azure, and all Microsoft technologies.", Url = "https://docs.microsoft.com" },
-                new PortalLink { PortalLinkId = 4, Name = "MDN Web Docs", Description = "Mozilla's comprehensive reference for HTML, CSS, and JavaScript web development.", Url = "https://developer.mozilla.org" },
-                new PortalLink { PortalLinkId = 5, Name = "NuGet Gallery", Description = "The package manager for .NET — browse and download open-source libraries for your projects.", Url = "https://www.nuget.org" },
-                new PortalLink { PortalLinkId = 6, Name = "Bootstrap Docs", Description = "Official Bootstrap 5 documentation for building responsive, mobile-first websites.", Url = "https://getbootstrap.com/docs" },
-                new PortalLink { PortalLinkId = 7, Name = "Entity Framework Docs", Description = "Microsoft's official EF Core documentation for database access in .NET applications.", Url = "https://learn.microsoft.com/en-us/ef/core/" },
-                new PortalLink { PortalLinkId = 8, Name = "W3Schools", Description = "Beginner-friendly tutorials and references for HTML, CSS, JavaScript, SQL, and more.", Url = "https://www.w3schools.com" }
+                new PortalLink { PortalLinkId = 1, Name = "GitHub Database", Description = "This is what you're using right now! GitHub Portal is a data-driven web application built with ASP.NET Core MVC that allows users to manage a curated list of useful links.", Url = "https://github.com/fesslerjo2024/GitHubDatabase_Fessler" },
+                new PortalLink { PortalLinkId = 2, Name = "AWS Cloud Portfolio Website", Description = "My personal portfolio website showcasing my projects, skills, resume, and contact information. Built with HTML, CSS, and JavaScript, the site is fully responsive and optimized for a smooth user experience.", Url = "https://github.com/fesslerjo2024/AWSCloudPortfolioWebsite_Fessler" },
+                new PortalLink { PortalLinkId = 3, Name = "MarketMates Database", Description = "MarketMates is a relational database system designed as a final project for Database Concepts, Design, and Application.", Url = "https://github.com/fesslerjo2024/MarketMates_Database" },
+                new PortalLink { PortalLinkId = 4, Name = "Weather App Java", Description = "Final Project for Java Class using Open-Meteo and Zippopotam.us APIs.", Url = "https://github.com/fesslerjo2024/WeatherAppJava_Fessler" },
+                new PortalLink { PortalLinkId = 5, Name = "Game Interface", Description = "This project was made in my Java class to demonstrate how to use an array as well as make objects.", Url = "https://github.com/fesslerjo2024/GameInterface_Fessler" },
+                new PortalLink { PortalLinkId = 6, Name = "JavaFX Circle Overlap", Description = "Assignment for my Java class to teach us how to use JavaFX to create random circles and color them when they overlap.", Url = "https://github.com/fesslerjo2024/JavaFXCircleOverlap" }
             );
         }
     }
